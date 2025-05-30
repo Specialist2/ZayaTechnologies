@@ -54,19 +54,19 @@
       </nav>
     </header>
     <section class="profile-section">
-      <video autoplay muted loop class="bg-video">
+      <!-- <video autoplay muted loop class="bg-video">
         <source src="videos/vide.mp4" type="video/mp4" />
-      </video>
+      </video> -->
       <div class="profile-content">
         <img src="images/profile4.png" alt="" class="profile-image" />
         <h1>Isaiah Kiprono Rotich</h1>
-        <p id="animated-role" style="font-weight: bold; font-size: 1.1em;"></p>
+        <p id="animated-role" style="font-weight: bold; font-size: 1.1em"></p>
         <script>
           const roles = [
             "Full Stack Developer",
             "Web Designer",
             "UI/UX Enthusiast",
-            "React & Node.js Specialist"
+            "React & Node.js Specialist",
           ];
           let roleIndex = 0;
           let charIndex = 0;
@@ -85,7 +85,10 @@
               }
             } else {
               if (charIndex > 0) {
-                roleElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+                roleElement.textContent = roles[roleIndex].substring(
+                  0,
+                  charIndex - 1
+                );
                 charIndex--;
                 setTimeout(typeRole, 35);
               } else {
@@ -295,30 +298,138 @@
 
     <section id="skills">
       <h2>Skills</h2>
-      <div style="max-width: 700px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(44,62,80,0.08); padding: 28px 32px;">
-        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 18px;">
-          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
-            <i class="fa-solid fa-code" style="color: #007bff; margin-right: 10px;"></i>
+      <div
+        style="
+          max-width: 700px;
+          margin: 0 auto;
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+          padding: 28px 32px;
+        "
+      >
+        <ul
+          style="
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+          "
+        >
+          <li
+            style="
+              flex: 1 1 220px;
+              background: #f4f8fb;
+              border-radius: 8px;
+              padding: 14px 18px;
+              margin-bottom: 0;
+              color: #222;
+              font-weight: 500;
+              display: flex;
+              align-items: center;
+            "
+          >
+            <i
+              class="fa-solid fa-code"
+              style="color: #007bff; margin-right: 10px"
+            ></i>
             HTML5, CSS3, JavaScript (ES6+)
           </li>
-          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
-            <i class="fa-brands fa-react" style="color: #25d366; margin-right: 10px;"></i>
+          <li
+            style="
+              flex: 1 1 220px;
+              background: #f4f8fb;
+              border-radius: 8px;
+              padding: 14px 18px;
+              margin-bottom: 0;
+              color: #222;
+              font-weight: 500;
+              display: flex;
+              align-items: center;
+            "
+          >
+            <i
+              class="fa-brands fa-react"
+              style="color: #25d366; margin-right: 10px"
+            ></i>
             React, Vue.js, Angular
           </li>
-          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
-            <i class="fa-brands fa-node-js" style="color: #007bff; margin-right: 10px;"></i>
+          <li
+            style="
+              flex: 1 1 220px;
+              background: #f4f8fb;
+              border-radius: 8px;
+              padding: 14px 18px;
+              margin-bottom: 0;
+              color: #222;
+              font-weight: 500;
+              display: flex;
+              align-items: center;
+            "
+          >
+            <i
+              class="fa-brands fa-node-js"
+              style="color: #007bff; margin-right: 10px"
+            ></i>
             Node.js, Express
           </li>
-          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
-            <i class="fa-brands fa-git-alt" style="color: #f34f29; margin-right: 10px;"></i>
+          <li
+            style="
+              flex: 1 1 220px;
+              background: #f4f8fb;
+              border-radius: 8px;
+              padding: 14px 18px;
+              margin-bottom: 0;
+              color: #222;
+              font-weight: 500;
+              display: flex;
+              align-items: center;
+            "
+          >
+            <i
+              class="fa-brands fa-git-alt"
+              style="color: #f34f29; margin-right: 10px"
+            ></i>
             Git &amp; GitHub
           </li>
-          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
-            <i class="fa-solid fa-mobile-screen" style="color: #25d366; margin-right: 10px;"></i>
+          <li
+            style="
+              flex: 1 1 220px;
+              background: #f4f8fb;
+              border-radius: 8px;
+              padding: 14px 18px;
+              margin-bottom: 0;
+              color: #222;
+              font-weight: 500;
+              display: flex;
+              align-items: center;
+            "
+          >
+            <i
+              class="fa-solid fa-mobile-screen"
+              style="color: #25d366; margin-right: 10px"
+            ></i>
             Responsive &amp; Mobile-First Design
           </li>
-          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
-            <i class="fa-solid fa-plug" style="color: #007bff; margin-right: 10px;"></i>
+          <li
+            style="
+              flex: 1 1 220px;
+              background: #f4f8fb;
+              border-radius: 8px;
+              padding: 14px 18px;
+              margin-bottom: 0;
+              color: #222;
+              font-weight: 500;
+              display: flex;
+              align-items: center;
+            "
+          >
+            <i
+              class="fa-solid fa-plug"
+              style="color: #007bff; margin-right: 10px"
+            ></i>
             REST APIs
           </li>
         </ul>
