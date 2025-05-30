@@ -61,52 +61,11 @@
       </nav>
     </header>
     <section class="profile-section">
-      <!-- <video autoplay muted loop class="bg-video">
-        <source src="videos/vide.mp4" type="video/mp4" />
-      </video> -->
       <div class="profile-content">
         <img src="images/profile4.png" alt="" class="profile-image" />
         <h1>Isaiah Kiprono Rotich</h1>
         <p id="animated-role" style="font-weight: bold; font-size: 1.1em"></p>
-        <script>
-          const roles = [
-            "Full Stack Developer",
-            "Web Designer",
-            "UI/UX Enthusiast",
-            "React & Node.js Specialist",
-          ];
-          let roleIndex = 0;
-          let charIndex = 0;
-          let typing = true;
-          const roleElement = document.getElementById("animated-role");
 
-          function typeRole() {
-            if (typing) {
-              if (charIndex < roles[roleIndex].length) {
-                roleElement.textContent += roles[roleIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(typeRole, 70);
-              } else {
-                typing = false;
-                setTimeout(typeRole, 1200);
-              }
-            } else {
-              if (charIndex > 0) {
-                roleElement.textContent = roles[roleIndex].substring(
-                  0,
-                  charIndex - 1
-                );
-                charIndex--;
-                setTimeout(typeRole, 35);
-              } else {
-                typing = true;
-                roleIndex = (roleIndex + 1) % roles.length;
-                setTimeout(typeRole, 400);
-              }
-            }
-          }
-          typeRole();
-        </script>
         <p class="slogan">Empowering Ideas, Delivering Digital Excellence.</p>
       </div>
     </section>
@@ -331,6 +290,7 @@
         </ul>
       </div>
     </section>
+
     <!-- Hire Me Popup Modal -->
     <div
       id="hireme-popup"
@@ -429,7 +389,7 @@
             text-decoration: none;
             margin-top: 10px;
           "
-        >Contact Form</a>
+          >Contact Form</a
         >
       </div>
     </div>
@@ -794,7 +754,6 @@
                 experience across devices. Assisted in onboarding new developers
                 and provided technical documentation for project handover.
               </span>
-              >
             </div>
           </li>
           <li
@@ -1130,24 +1089,6 @@
             web design.
           </div>
         </details>
-
-        <script>
-          // Animate FAQ answers on open
-          document.querySelectorAll("details").forEach((details) => {
-            details.addEventListener("toggle", function () {
-              const answer = this.querySelector(".faq-answer");
-              if (this.open) {
-                setTimeout(() => {
-                  answer.style.opacity = "1";
-                  answer.style.transform = "translateY(0)";
-                }, 100); // slight delay for smoothness
-              } else {
-                answer.style.opacity = "0";
-                answer.style.transform = "translateY(20px)";
-              }
-            });
-          });
-        </script>
       </div>
     </section>
     <section id="contact">
@@ -1249,7 +1190,7 @@
         />
       </a>
     </section>
-    <!-- Loading Animation Overlay -->
+
     <div
       id="loading-overlay"
       style="
@@ -1334,8 +1275,133 @@
         style="font-weight: bold; font-size: 1.1em; margin-bottom: 8px"
       ></p>
 
+      <style>
+        .footer-social-icon {
+          transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          display: inline-block;
+        }
+        .footer-social-icon:hover {
+          transform: rotate(360deg);
+        }
+
+        .footer-social-icon .fa-x-twitter {
+          transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .footer-social-icon {
+          transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          display: inline-block;
+        }
+        .footer-social-icon:hover {
+          animation: bounce 0.5s;
+        }
+        @keyframes bounce {
+          0% {
+            transform: translateY(0);
+          }
+          30% {
+            transform: translateY(-10px);
+          }
+          50% {
+            transform: translateY(-18px);
+          }
+          70% {
+            transform: translateY(-10px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+        /* Animate X (Twitter) icon to cross itself on hover */
+        .footer-social-icon .fa-x-twitter {
+          transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .footer-social-icon:hover .fa-x-twitter {
+          transform: scaleX(-1);
+        }
+      </style>
+      <a
+        href="https://github.com/Specialist2"
+        target="_blank"
+        aria-label="GitHub"
+        style="
+          color: #007bff;
+          font-size: 1.2em;
+          margin: 0 8px;
+          vertical-align: middle;
+        "
+        class="footer-social-icon"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a
+        href="https://twitter.com/isaiadeliveries"
+        target="_blank"
+        aria-label="Twitter"
+        style="
+          color: #25d366;
+          font-size: 1.2em;
+          margin: 0 8px;
+          vertical-align: middle;
+        "
+        class="footer-social-icon"
+      >
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a
+        href="https://www.facebook.com/kipro.Braddock"
+        target="_blank"
+        aria-label="Facebook"
+        style="
+          color: #007bff;
+          font-size: 1.2em;
+          margin: 0 8px;
+          vertical-align: middle;
+        "
+        class="footer-social-icon"
+      >
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a
+        href="https://wa.me/+254793528525"
+        target="_blank"
+        aria-label="WhatsApp"
+        style="
+          color: #25d366;
+          font-size: 1.2em;
+          margin: 0 8px;
+          vertical-align: middle;
+        "
+        class="footer-social-icon"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a
+        href="mailto:isaiahrotich51@gmail.com"
+        aria-label="Email"
+        style="
+          color: #007bff;
+          font-size: 1.2em;
+          margin: 0 8px;
+          vertical-align: middle;
+        "
+        class="footer-social-icon"
+      >
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+
+      <p
+        id="animated-zaya"
+        style="font-weight: bold; font-size: 1.1em; margin-bottom: 8px"
+      ></p>
+      <p
+        id="animated-zaya"
+        style="font-weight: bold; font-size: 1.1em; margin-bottom: 8px"
+      ></p>
+
       <p>&copy; 2024 Isaiah. All rights reserved.</p>
     </footer>
   </body>
+
   <script src="index.js"></script>
 </html>

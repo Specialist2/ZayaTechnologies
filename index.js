@@ -112,3 +112,64 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 });
+
+document.querySelectorAll("details").forEach((details) => {
+  details.addEventListener("toggle", function () {
+    const answer = this.querySelector(".faq-answer");
+    if (this.open) {
+      setTimeout(() => {
+        answer.style.opacity = "1";
+        answer.style.transform = "translateY(0)";
+      }, 100);
+    } else {
+      answer.style.opacity = "0";
+      answer.style.transform = "translateY(20px)";
+    }
+  });
+});
+/* Example: Smooth scroll for anchor links */
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    const targetId = this.getAttribute("href").slice(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+const roles = [
+  "Full Stack Developer",
+  "Web Designer",
+  "UI/UX Enthusiast",
+  "React & Node.js Specialist",
+];
+let roleIndex = 0;
+let charIndex = 0;
+let typing = true;
+const roleElement = document.getElementById("animated-role");
+
+function typeRole() {
+  if (typing) {
+    if (charIndex < roles[roleIndex].length) {
+      roleElement.textContent += roles[roleIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeRole, 70);
+    } else {
+      typing = false;
+      setTimeout(typeRole, 1200);
+    }
+  } else {
+    if (charIndex > 0) {
+      roleElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(typeRole, 35);
+    } else {
+      typing = true;
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(typeRole, 400);
+    }
+  }
+}
+typeRole();
