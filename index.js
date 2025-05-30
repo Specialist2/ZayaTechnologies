@@ -1,14 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger-menu");
   const nav = document.getElementById("main-nav");
-  hamburger.addEventListener("click", function () {
+
+  function closeMenu() {
+    nav.classList.remove("active");
+    hamburger.classList.remove("active");
+    document.removeEventListener("click", outsideClickListener);
+  }
+
+  function outsideClickListener(e) {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      closeMenu();
+    }
+  }
+
+  hamburger.addEventListener("click", function (e) {
     nav.classList.toggle("active");
     hamburger.classList.toggle("active");
+    if (nav.classList.contains("active")) {
+      setTimeout(() => {
+        document.addEventListener("click", outsideClickListener);
+      }, 0);
+    } else {
+      document.removeEventListener("click", outsideClickListener);
+    }
+    e.stopPropagation();
   });
+
   hamburger.addEventListener("keypress", function (e) {
     if (e.key === "Enter" || e.key === " ") {
       nav.classList.toggle("active");
       hamburger.classList.toggle("active");
+      if (nav.classList.contains("active")) {
+        setTimeout(() => {
+          document.addEventListener("click", outsideClickListener);
+        }, 0);
+      } else {
+        document.removeEventListener("click", outsideClickListener);
+      }
     }
   });
 });
@@ -64,3 +93,22 @@ function typeLoadingText() {
   }
 }
 typeLoadingText();
+
+setTimeout(function () {
+  var popup = document.getElementById("hireme-popup");
+  if (popup) popup.style.display = "flex";
+}, 10000);
+
+document.addEventListener("DOMContentLoaded", function () {
+  var closeBtn = document.getElementById("close-hireme-popup");
+  var popup = document.getElementById("hireme-popup");
+  if (closeBtn && popup) {
+    closeBtn.onclick = function () {
+      popup.style.display = "none";
+    };
+    // Optional: close popup when clicking outside modal
+    popup.onclick = function (e) {
+      if (e.target === popup) popup.style.display = "none";
+    };
+  }
+});
