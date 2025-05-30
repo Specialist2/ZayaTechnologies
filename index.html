@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="images/zayalogo.jpg" />
+    <style>
+      footer img[alt="Zaya Technologies Logo"] {
+        width: 80px !important;
+        height: 80px !important;
+      }
+    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -108,8 +115,9 @@
       style="
         text-align: center;
         padding: 16px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;
       "
     >
       <a
@@ -224,29 +232,33 @@
               color: #111;
             "
           >
-            <strong style="font-size: 1.1em; color: #007bff"
-              >Personal Blog</strong
-            >
-            <span style="color: #444">
-              A modern blog platform built with HTML, CSS, and JavaScript.
-            </span>
-          </li>
-          <li
-            style="
-              background: #fff;
-              border-radius: 12px;
-              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
-              margin-bottom: 20px;
-              padding: 24px 28px;
-              display: flex;
-              flex-direction: column;
-              gap: 6px;
-              color: #111;
-            "
-          >
             <strong style="font-size: 1.1em; color: #25d366"
               >Portfolio Website</strong
             >
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 18px;
+                flex-wrap: wrap;
+              "
+            >
+              <img
+                src="images/portfolio.png"
+                alt="Portfolio Website Screenshot"
+                style="
+                  width: 100%;
+                  max-width: 400px;
+                  border-radius: 8px;
+                  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+                  margin-bottom: 10px;
+                  display: block;
+                  object-fit: cover;
+                  flex: 1 1 180px;
+                "
+              />
+            </div>
             <span style="color: #444">
               My own responsive portfolio to showcase my work.
             </span>
@@ -267,6 +279,19 @@
             <strong style="font-size: 1.1em; color: #007bff"
               >Weather App</strong
             >
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=320&q=80"
+              alt="Weather App Screenshot"
+              style="
+                width: 100%;
+                max-width: 400px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+                margin-bottom: 10px;
+                display: block;
+              "
+            />
+
             <span style="color: #444">
               A simple weather application using a public API.
             </span>
@@ -287,6 +312,17 @@
             <strong style="font-size: 1.1em; color: #25d366"
               >Salon Booking Website</strong
             >
+            <img
+              src="images/salon.png"
+              alt="Salon Booking Website Screenshot"
+              style="
+                width: 100%;
+                max-width: 320px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+                margin-bottom: 10px;
+              "
+            />
             <span style="color: #444">
               An online platform for clients to book salon appointments, view
               services, and manage schedules.
@@ -435,7 +471,6 @@
         </ul>
       </div>
     </section>
-
     <section id="education">
       <h2>Education</h2>
       <div style="max-width: 700px; margin: 0 auto">
@@ -459,8 +494,25 @@
             <span style="font-weight: bold; color: #111; font-size: 1.05em">
               Diploma in Agri-economics
             </span>
-            <span style="color: #111">Mt. Kenya University</span>
-            <span style="color: #111; font-size: 0.98em">2022</span>
+            <span
+              style="color: #111; display: flex; align-items: center; gap: 8px"
+            >
+              <img
+                src="images/mku.png"
+                alt="Mt. Kenya University Logo"
+                style="height: 30px; vertical-align: middle"
+              />
+              Mt. Kenya University
+            </span>
+            <span
+              style="
+                color: #111;
+                font-size: 0.98em;
+                align-self: flex-start;
+                margin-left: 38px;
+              "
+              >2022</span
+            >
           </li>
           <li
             style="
@@ -478,8 +530,61 @@
             <span style="font-weight: bold; color: #111; font-size: 1.1em">
               Fullstack Developer
             </span>
-            <span style="color: #111">Eldohub Academy</span>
-            <span style="color: #111; font-size: 0.98em">2025 </span>
+            <span
+              style="color: #111; display: flex; align-items: center; gap: 8px"
+            >
+              <img
+                src="images/eldohub.png"
+                alt="Eldohub Academy Logo"
+                style="height: 30px; vertical-align: middle"
+              />
+              Eldohub Academy
+            </span>
+            <span
+              style="
+                color: #111;
+                font-size: 0.98em;
+                align-self: flex-start;
+                margin-left: 45px;
+              "
+              >2025</span
+            >
+          </li>
+          <li
+            style="
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+              color: #111;
+            "
+          >
+            <span style="font-weight: bold; color: #111; font-size: 1.1em">
+              Networking and Cyber Security
+            </span>
+            <span
+              style="color: #111; display: flex; align-items: center; gap: 8px"
+            >
+              <img
+                src="images/cisco.png"
+                alt="Cisco Logo"
+                style="height: 30px; vertical-align: middle"
+              />
+              CISCO
+            </span>
+            <span
+              style="
+                color: #111;
+                font-size: 0.98em;
+                align-self: flex-start;
+                margin-left: 40px;
+              "
+              >Ongoing</span
+            >
           </li>
         </ul>
       </div>
@@ -492,61 +597,189 @@
         <ul style="list-style: none; padding: 0">
           <li
             style="
-              background: #fff;
+              background: #fff
+                url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80')
+                center/cover no-repeat;
               border-radius: 12px;
               box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
               margin-bottom: 20px;
               padding: 24px;
+              color: #111;
+              position: relative;
+              overflow: hidden;
+              min-height: 220px;
             "
           >
-            <strong style="color: #25d366">Full Stack Developer</strong><br />
-            <span style="color: #888">Freelance (2023 - Present)</span><br />
-            <span style="display: block; margin-top: 8px; color: #444">
-              Built and maintained websites for small businesses and startups,
-              including e-commerce, portfolio, and booking platforms. Managed
-              both frontend and backend development, ensuring responsive design
-              and optimal performance.
-            </span>
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.85);
+                border-radius: 8px;
+                padding: 12px;
+              "
+            >
+              <strong style="color: #25d366">Full Stack Developer</strong><br />
+              <span style="color: #888">Freelance (2023 - Present)</span><br />
+              <span style="display: block; margin-top: 8px; color: #444">
+                Built and maintained websites for small businesses and startups,
+                including e-commerce, portfolio, and booking platforms. Managed
+                both frontend and backend development, ensuring responsive
+                design and optimal performance.
+              </span>
+            </div>
           </li>
           <li
             style="
-              background: #fff;
+              background: #fff
+                url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80')
+                center/cover no-repeat;
               border-radius: 12px;
               box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
               margin-bottom: 20px;
               padding: 24px;
+              color: #111;
+              position: relative;
+              overflow: hidden;
+              min-height: 220px;
             "
           >
-            <strong style="color: #25d366">Frontend Developer Intern</strong
-            ><br />
-            <span style="color: #888">Eldohub Academy (2024)</span><br />
-            <span style="display: block; margin-top: 8px; color: #444">
-              Collaborated with a team to develop educational web applications
-              using React and REST APIs. Improved UI accessibility and
-              contributed to code reviews and agile sprints.
-            </span>
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.88);
+                border-radius: 8px;
+                padding: 12px;
+              "
+            >
+              <strong style="color: #007bff">Web Developer</strong><br />
+              <span style="color: #888">Freelance | 2022 - 2023</span><br />
+              <span style="display: block; margin-top: 8px; color: #444">
+                Developed web applications for clients, focusing on clean code
+                and user-friendly interfaces.
+              </span>
+            </div>
           </li>
           <li
             style="
-              background: #fff;
+              background: #fff
+                url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80')
+                center/cover no-repeat;
               border-radius: 12px;
               box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
               margin-bottom: 20px;
               padding: 24px;
+              color: #111;
+              position: relative;
+              overflow: hidden;
+              min-height: 220px;
             "
           >
-            <strong style="color: #25d366">Web Designer</strong><br />
-            <span style="color: #888">Zaya Technologies (2022 - 2023)</span
-            ><br />
-            <span style="display: block; margin-top: 8px; color: #444">
-              Designed modern, mobile-friendly layouts and branding assets for
-              client websites. Worked closely with clients to translate
-              requirements into engaging digital experiences.
-            </span>
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.88);
+                border-radius: 8px;
+                padding: 12px;
+              "
+            >
+              <strong style="color: #25d366">Frontend Developer</strong><br />
+              <span style="color: #888">Eldohub Academy (2025)</span><br />
+              <span style="display: block; margin-top: 8px; color: #444">
+                Collaborated with a team to develop educational web applications
+                using React and REST APIs. Improved UI accessibility and
+                contributed to code reviews and agile sprints.</span
+              >
+            </div>
+          </li>
+          <li
+            style="
+              background: #fff
+                url('https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80')
+                center/cover no-repeat;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px;
+              color: #111;
+              position: relative;
+              overflow: hidden;
+              min-height: 220px;
+            "
+          >
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.88);
+                border-radius: 8px;
+                padding: 12px;
+              "
+            >
+              <strong style="color: #25d366">Web Designer</strong><br />
+              <span style="color: #888">Zaya Technologies (2022 - 2023)</span
+              ><br />
+              <span style="display: block; margin-top: 8px; color: #444">
+                Designed modern, mobile-friendly layouts and branding assets for
+                client websites. Worked closely with clients to translate
+                requirements into engaging digital experiences.</span
+              >
+            </div>
           </li>
         </ul>
       </div>
     </section>
+    <section id="teaching">
+      <h2>Teaching & Mentorship</h2>
+      <div style="max-width: 700px; margin: 0 auto">
+        <ul style="list-style: none; padding: 0">
+          <li
+            style="
+              background: #fff;
+              border-radius: 10px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 16px;
+              padding: 18px 22px;
+            "
+          >
+            <strong style="color: #007bff"
+              >Front-End Web Development Guidance</strong
+            >
+            <div style="color: #444; margin-top: 6px">
+              I provide clear, practical mentorship in HTML, CSS, and
+              JavaScript. Learn to build modern websites with step-by-step
+              support and real-world advice.
+            </div>
+          </li>
+          <li
+            style="
+              background: #fff;
+              border-radius: 10px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 16px;
+              padding: 18px 22px;
+            "
+          >
+            <strong style="color: #25d366">Mentorship & Code Reviews</strong>
+            <div style="color: #444; margin-top: 6px">
+              Receive one-on-one guidance, code reviews, and career tips to help
+              you grow as a developer. Contact me to get started.
+            </div>
+          </li>
+          <li
+            style="
+              background: #fff;
+              border-radius: 10px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 16px;
+              padding: 18px 22px;
+            "
+          >
+            <strong style="color: #222">How to Use AI Effectively</strong>
+            <div style="color: #444; margin-top: 6px">
+              Learn how to leverage AI tools for coding, debugging, and
+              productivity. I teach best practices for reviewing AI generated
+              code and integrating AI into your workflow responsibly.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section id="testimonials" style="background: #f8f9fa; padding: 40px 0">
       <h2 style="text-align: center; color: #222; margin-bottom: 32px">
         Testimonials
@@ -659,6 +892,148 @@
         </div>
       </div>
     </section>
+    <section id="faq" style="background: #f4f8fb; padding: 40px 0">
+      <h2 style="text-align: center; color: #007bff; margin-bottom: 24px">
+        Frequently Asked Questions
+      </h2>
+      <div style="max-width: 700px; margin: 0 auto">
+        <details
+          style="
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+            margin-bottom: 16px;
+            padding: 18px 22px;
+          "
+        >
+          <summary style="font-weight: bold; color: #222; cursor: pointer">
+            How can I hire you for a project?
+          </summary>
+          <div
+            class="faq-answer"
+            style="
+              background: #f4f8fb;
+              padding: 12px 18px;
+              border-radius: 8px;
+              opacity: 0;
+              transform: translateY(20px);
+              transition: opacity 0.5s, transform 0.5s;
+            "
+          >
+            <div
+              style="
+                background: #f4f8fb;
+                padding: 12px 18px;
+                border-radius: 8px;
+              "
+            >
+              You can contact me via email, WhatsApp, or the contact form above.
+              I will respond promptly to discuss your project needs.
+            </div>
+          </div>
+        </details>
+        <details
+          style="
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+            margin-bottom: 16px;
+            padding: 18px 22px;
+          "
+        >
+          <summary style="font-weight: bold; color: #222; cursor: pointer">
+            What services do you offer?
+          </summary>
+          <div
+            class="faq-answer"
+            style="
+              background: #f4f8fb;
+              padding: 12px 18px;
+              border-radius: 8px;
+              opacity: 0;
+              transform: translateY(20px);
+              transition: opacity 0.5s, transform 0.5s;
+            "
+          >
+            I offer web development, UI/UX design, mentorship, and consulting
+            for digital projects.
+          </div>
+        </details>
+
+        <details
+          style="
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+            margin-bottom: 16px;
+            padding: 18px 22px;
+          "
+        >
+          <summary style="font-weight: bold; color: #222; cursor: pointer">
+            Do you provide mentorship or training?
+          </summary>
+          <div
+            class="faq-answer"
+            style="
+              background: #f4f8fb;
+              padding: 12px 18px;
+              border-radius: 8px;
+              opacity: 0;
+              transform: translateY(20px);
+              transition: opacity 0.5s, transform 0.5s;
+            "
+          >
+            Yes, I offer mentorship in web development and best practices for
+            using AI tools in coding.
+          </div>
+        </details>
+        <details
+          style="
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+            margin-bottom: 16px;
+            padding: 18px 22px;
+          "
+        >
+          <summary style="font-weight: bold; color: #222; cursor: pointer">
+            What technologies do you specialize in?
+          </summary>
+          <div
+            class="faq-answer"
+            style="
+              background: #f4f8fb;
+              padding: 12px 18px;
+              border-radius: 8px;
+              opacity: 0;
+              transform: translateY(20px);
+              transition: opacity 0.5s, transform 0.5s;
+            "
+          >
+            I specialize in HTML, CSS, JavaScript, React, Node.js and responsive
+            web design.
+          </div>
+        </details>
+
+        <script>
+          // Animate FAQ answers on open
+          document.querySelectorAll("details").forEach((details) => {
+            details.addEventListener("toggle", function () {
+              const answer = this.querySelector(".faq-answer");
+              if (this.open) {
+                setTimeout(() => {
+                  answer.style.opacity = "1";
+                  answer.style.transform = "translateY(0)";
+                }, 100); // slight delay for smoothness
+              } else {
+                answer.style.opacity = "0";
+                answer.style.transform = "translateY(20px)";
+              }
+            });
+          });
+        </script>
+      </div>
+    </section>
     <section id="contact">
       <h2 class="contact-title">Contact</h2>
       <div class="contact-info">
@@ -758,6 +1133,82 @@
         />
       </a>
     </section>
+    <!-- Loading Animation Overlay -->
+    <div
+      id="loading-overlay"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(120deg, #25d366 0%, #007bff 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.6s;
+      "
+    >
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <div
+          class="loader-spinner"
+          style="
+            border: 8px solid #e0e0e0;
+            border-top: 8px solid #25d366;
+            border-right: 8px solid #007bff;
+            border-radius: 50%;
+            width: 72px;
+            height: 72px;
+            animation: spin 1.2s linear infinite;
+            margin-bottom: 32px;
+          "
+        ></div>
+        <h2
+          style="
+            color: #fff;
+            font-size: 2.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(44, 62, 80, 0.18);
+            text-align: center;
+          "
+        >
+          Welcome to Isaiah's Portfolio
+        </h2>
+        <p
+          style="
+            margin-left: 20px;
+            margin-right: 20px;
+            color: #f4f8fb;
+            font-size: 1.15em;
+            margin-bottom: 0;
+            text-align: center;
+            max-width: 400px;
+            line-height: 1.5;
+            text-shadow: 0 1px 4px rgba(44, 62, 80, 0.1);
+          "
+        >
+          <span id="loading-animated-text"></span>
+     
+        </p>
+      </div>
+    </div>
+    <style>
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  
     <footer>
       <p
         id="animated-zaya"
@@ -767,21 +1218,7 @@
         id="animated-zaya"
         style="font-weight: bold; font-size: 1.1em; margin-bottom: 8px"
       ></p>
-      <img
-        src="images/zayalogo.jpg"
-        alt="Zaya Technologies Logo"
-        style="
-          display: block;
-          margin: 0 auto 12px auto;
-          width: 56px;
-          height: 56px;
-          border-radius: 50%;
-          object-fit: cover;
-          box-shadow: 0 2px 8px rgba(44, 62, 80, 0.15);
-          border: 2px solid #25d366;
-          background: #fff;
-        "
-      />
+
       <p>&copy; 2024 Isaiah. All rights reserved.</p>
     </footer>
   </body>
