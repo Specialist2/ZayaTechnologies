@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1
+        class="shining-text"
+        style="
+          background: linear-gradient(
+            90deg,
+            #25d366 20%,
+            #007bff 60%,
+            #222 100%
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: bold;
+          position: relative;
+          overflow: hidden;
+        "
+      >
+        Welcome to<br />
+        My Portfolio Website!
+      </h1>
+
+      <div
+        class="hamburger"
+        id="hamburger-menu"
+        aria-label="Open navigation"
+        tabindex="0"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="main-nav">
+        <a href="#about" class="nav-link">About</a> |
+        <a href="#projects" class="nav-link">Projects</a> |
+        <a href="#contact" class="nav-link">Contact</a>|
+        <a href="#contact" class="nav-link">Hire ME</a>
+      </nav>
+    </header>
+    <section class="profile-section">
+      <video autoplay muted loop class="bg-video">
+        <source src="videos/vide.mp4" type="video/mp4" />
+      </video>
+      <div class="profile-content">
+        <img src="images/profile4.png" alt="" class="profile-image" />
+        <h1>Isaiah Kiprono Rotich</h1>
+        <p id="animated-role" style="font-weight: bold; font-size: 1.1em;"></p>
+        <script>
+          const roles = [
+            "Full Stack Developer",
+            "Web Designer",
+            "UI/UX Enthusiast",
+            "React & Node.js Specialist"
+          ];
+          let roleIndex = 0;
+          let charIndex = 0;
+          let typing = true;
+          const roleElement = document.getElementById("animated-role");
+
+          function typeRole() {
+            if (typing) {
+              if (charIndex < roles[roleIndex].length) {
+                roleElement.textContent += roles[roleIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeRole, 70);
+              } else {
+                typing = false;
+                setTimeout(typeRole, 1200);
+              }
+            } else {
+              if (charIndex > 0) {
+                roleElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(typeRole, 35);
+              } else {
+                typing = true;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(typeRole, 400);
+              }
+            }
+          }
+          typeRole();
+        </script>
+        <p class="slogan">Empowering Ideas, Delivering Digital Excellence.</p>
+      </div>
+    </section>
+    <section
+      class="cta-section"
+      style="
+        text-align: center;
+        padding: 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+      "
+    >
+      <a
+        href="#contact"
+        class="cta-btn"
+        style="
+          display: inline-block;
+          background: #25d366;
+          color: #fff;
+          padding: 12px 32px;
+          border-radius: 24px;
+          font-weight: bold;
+          text-decoration: none;
+          margin: 8px 12px;
+          box-shadow: 0 2px 8px rgba(44, 62, 80, 0.12);
+          transition: background 0.2s;
+        "
+      >
+        Contact Me
+      </a>
+      <a
+        href="#projects"
+        class="cta-btn"
+        style="
+          display: inline-block;
+          background: #007bff;
+          color: #fff;
+          padding: 12px 32px;
+          border-radius: 24px;
+          font-weight: bold;
+          text-decoration: none;
+          margin: 8px 12px;
+          box-shadow: 0 2px 8px rgba(44, 62, 80, 0.12);
+          transition: background 0.2s;
+        "
+      >
+        View Projects
+      </a>
+      <a
+        href="mailto:isaiahrotich51@gmail.com"
+        class="cta-btn"
+        style="
+          display: inline-block;
+          background: #222;
+          color: #fff;
+          padding: 12px 32px;
+          border-radius: 24px;
+          font-weight: bold;
+          text-decoration: none;
+          margin: 8px 12px;
+          box-shadow: 0 2px 8px rgba(44, 62, 80, 0.12);
+          transition: background 0.2s;
+        "
+      >
+        <span
+          style="
+            display: flex;
+            align-items: center;
+            color: #25d366;
+            transition: color 0.2s;
+          "
+        >
+          <i
+            class="fa-solid fa-briefcase"
+            style="margin-right: 8px; color: #25d366; transition: color 0.2s"
+          ></i
+          >Hire Me
+        </span>
+      </a>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div
+        style="
+          max-width: 700px;
+          margin: 0 auto;
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+          padding: 28px 32px;
+          color: #222;
+          font-size: 1.08em;
+          line-height: 1.7;
+        "
+      >
+        <p style="margin: 0">
+          Hello! I'm
+          <span style="font-weight: bold; color: #007bff">Isaiah</span>, a web
+          developer skilled in <span style="color: #25d366">HTML</span>,
+          <span style="color: #007bff">CSS</span>, and
+          <span style="color: #222">JavaScript</span>. I specialize in building
+          responsive, user-friendly websites that deliver seamless digital
+          experiences and drive results for clients.
+        </p>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-list" style="max-width: 700px; margin: 0 auto">
+        <ul style="list-style: none; padding: 0; margin: 0">
+          <li
+            style="
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+              color: #111;
+            "
+          >
+            <strong style="font-size: 1.1em; color: #007bff"
+              >Personal Blog</strong
+            >
+            <span style="color: #444">
+              A modern blog platform built with HTML, CSS, and JavaScript.
+            </span>
+          </li>
+          <li
+            style="
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+              color: #111;
+            "
+          >
+            <strong style="font-size: 1.1em; color: #25d366"
+              >Portfolio Website</strong
+            >
+            <span style="color: #444">
+              My own responsive portfolio to showcase my work.
+            </span>
+          </li>
+          <li
+            style="
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+              color: #111;
+            "
+          >
+            <strong style="font-size: 1.1em; color: #007bff"
+              >Weather App</strong
+            >
+            <span style="color: #444">
+              A simple weather application using a public API.
+            </span>
+          </li>
+          <li
+            style="
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+              color: #111;
+            "
+          >
+            <strong style="font-size: 1.1em; color: #25d366"
+              >Salon Booking Website</strong
+            >
+            <span style="color: #444">
+              An online platform for clients to book salon appointments, view
+              services, and manage schedules.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="max-width: 700px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(44,62,80,0.08); padding: 28px 32px;">
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 18px;">
+          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
+            <i class="fa-solid fa-code" style="color: #007bff; margin-right: 10px;"></i>
+            HTML5, CSS3, JavaScript (ES6+)
+          </li>
+          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
+            <i class="fa-brands fa-react" style="color: #25d366; margin-right: 10px;"></i>
+            React, Vue.js, Angular
+          </li>
+          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
+            <i class="fa-brands fa-node-js" style="color: #007bff; margin-right: 10px;"></i>
+            Node.js, Express
+          </li>
+          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
+            <i class="fa-brands fa-git-alt" style="color: #f34f29; margin-right: 10px;"></i>
+            Git &amp; GitHub
+          </li>
+          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
+            <i class="fa-solid fa-mobile-screen" style="color: #25d366; margin-right: 10px;"></i>
+            Responsive &amp; Mobile-First Design
+          </li>
+          <li style="flex: 1 1 220px; background: #f4f8fb; border-radius: 8px; padding: 14px 18px; margin-bottom: 0; color: #222; font-weight: 500; display: flex; align-items: center;">
+            <i class="fa-solid fa-plug" style="color: #007bff; margin-right: 10px;"></i>
+            REST APIs
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div style="max-width: 700px; margin: 0 auto">
+        <ul style="list-style: none; padding: 0">
+          <li
+            style="
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+              color: #111;
+            "
+          >
+            <span style="font-weight: bold; color: #111; font-size: 1.1em">
+              Diploma in Information Technology
+            </span>
+            <span style="font-weight: bold; color: #111; font-size: 1.05em">
+              Diploma in Agri-economics
+            </span>
+            <span style="color: #111">Mt. Kenya University</span>
+            <span style="color: #111; font-size: 0.98em">2022</span>
+          </li>
+          <li
+            style="
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+              color: #111;
+            "
+          >
+            <span style="font-weight: bold; color: #111; font-size: 1.1em">
+              Fullstack Developer
+            </span>
+            <span style="color: #111">Eldohub Academy</span>
+            <span style="color: #111; font-size: 0.98em">2025 </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="experience" style="background: #f4f8fb; padding: 40px 0">
+      <h2 style="text-align: center; color: #007bff; margin-bottom: 24px">
+        Experience
+      </h2>
+      <div style="max-width: 800px; margin: 0 auto">
+        <ul style="list-style: none; padding: 0">
+          <li
+            style="
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px;
+            "
+          >
+            <strong style="color: #25d366">Full Stack Developer</strong><br />
+            <span style="color: #888">Freelance (2023 - Present)</span><br />
+            <span style="display: block; margin-top: 8px; color: #444">
+              Built and maintained websites for small businesses and startups,
+              including e-commerce, portfolio, and booking platforms. Managed
+              both frontend and backend development, ensuring responsive design
+              and optimal performance.
+            </span>
+          </li>
+          <li
+            style="
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px;
+            "
+          >
+            <strong style="color: #25d366">Frontend Developer Intern</strong
+            ><br />
+            <span style="color: #888">Eldohub Academy (2024)</span><br />
+            <span style="display: block; margin-top: 8px; color: #444">
+              Collaborated with a team to develop educational web applications
+              using React and REST APIs. Improved UI accessibility and
+              contributed to code reviews and agile sprints.
+            </span>
+          </li>
+          <li
+            style="
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+              margin-bottom: 20px;
+              padding: 24px;
+            "
+          >
+            <strong style="color: #25d366">Web Designer</strong><br />
+            <span style="color: #888">Zaya Technologies (2022 - 2023)</span
+            ><br />
+            <span style="display: block; margin-top: 8px; color: #444">
+              Designed modern, mobile-friendly layouts and branding assets for
+              client websites. Worked closely with clients to translate
+              requirements into engaging digital experiences.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="testimonials" style="background: #f8f9fa; padding: 40px 0">
+      <h2 style="text-align: center; color: #222; margin-bottom: 32px">
+        Testimonials
+      </h2>
+      <div
+        class="testimonials-container"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 32px;
+        "
+      >
+        <div
+          class="testimonial-card"
+          style="
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(44, 62, 80, 0.1);
+            padding: 24px 20px;
+            max-width: 340px;
+            text-align: center;
+          "
+        >
+          <img
+            src="images/ai2.jpg"
+            alt="Mercy Rotich"
+            style="
+              width: 56px;
+              height: 56px;
+              border-radius: 50%;
+              object-fit: cover;
+              margin-bottom: 12px;
+              border: 2px solid #25d366;
+              aspect-ratio: 1/1;
+            "
+          />
+          <blockquote
+            style="font-style: italic; color: #444; margin-bottom: 12px"
+          >
+            "Isaiah is a talented developer who delivers quality work on time."
+          </blockquote>
+          <div style="font-weight: bold; color: #25d366">Mercy Rotich</div>
+          <div style="font-size: 0.95em; color: #888">Business Owner</div>
+        </div>
+        <div
+          class="testimonial-card"
+          style="
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(44, 62, 80, 0.1);
+            padding: 24px 20px;
+            max-width: 340px;
+            text-align: center;
+          "
+        >
+          <img
+            src="images/nicholus.jpg"
+            alt="Nicholus K. Rono"
+            style="
+              width: 56px;
+              height: 56px;
+              border-radius: 50%;
+              object-fit: cover;
+              margin-bottom: 12px;
+              border: 2px solid #007bff;
+              aspect-ratio: 1/1;
+            "
+          />
+          <blockquote
+            style="font-style: italic; color: #444; margin-bottom: 12px"
+          >
+            "Great to work with and very professional."
+          </blockquote>
+          <div style="font-weight: bold; color: #25d366">Nicholus K. Rono</div>
+          <div style="font-size: 0.95em; color: #888">Advocate</div>
+        </div>
+        <div
+          class="testimonial-card"
+          style="
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(44, 62, 80, 0.1);
+            padding: 24px 20px;
+            max-width: 340px;
+            text-align: center;
+          "
+        >
+          <img
+            src="images/ai.png"
+            alt="Nafula Rachael"
+            style="
+              width: 56px;
+              height: 56px;
+              border-radius: 50%;
+              object-fit: cover;
+              margin-bottom: 12px;
+              border: 2px solid #25d366;
+              aspect-ratio: 1/1;
+            "
+          />
+          <blockquote
+            style="font-style: italic; color: #444; margin-bottom: 12px"
+          >
+            "Isaiah exceeded our expectations and brought our vision to life
+            beautifully."
+          </blockquote>
+          <div style="font-weight: bold; color: #25d366">Cynthia Mugo</div>
+          <div style="font-size: 0.95em; color: #888">Salon Owner</div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2 class="contact-title">Contact</h2>
+      <div class="contact-info">
+        <p class="contact-item">
+          <a
+            href="mailto:isaiahrotich51@gmail.com"
+            class="contact-link"
+            target="_blank"
+          >
+            <i class="fa-solid fa-envelope contact-icon"></i>
+            isaiahrotich51@gmail.com
+          </a>
+        </p>
+        <p class="contact-item">
+          <a
+            href="https://www.facebook.com/kipro.Braddock"
+            class="contact-link"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook contact-icon"></i>
+            Kiprono Isaiah
+          </a>
+        </p>
+        <p class="contact-item">
+          <a href="tel:+254793528525" class="contact-link">
+            <i class="fa-solid fa-phone contact-icon"></i>
+            +254 793 528 525
+          </a>
+        </p>
+        <p class="contact-item">
+          <a
+            href="https://github.com/Specialist2"
+            class="contact-link"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github contact-icon"></i>
+            Specialist2
+          </a>
+        </p>
+        <p class="contact-item">
+          <a
+            href="https://twitter.com/isaiadeliveries"
+            class="contact-link"
+            target="_blank"
+          >
+            <i class="fa-brands fa-x-twitter contact-icon"></i>
+            Zaya
+          </a>
+        </p>
+      </div>
+      <form
+        action="mailto:isaiahrotich51@gmail.com"
+        method="post"
+        enctype="text/plain"
+        class="contact-form"
+      >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+
+      <a
+        href="https://wa.me/+254793528525?text=Hi%20Isaiah%20I%20am%20interested%20to%20collaborate%20with%20you%20in%20my%20website%20project%2C%20can%20I%20get%20more%20information%3F"
+        target="_blank"
+        id="whatsapp-float"
+        aria-label="Chat on WhatsApp"
+        style="
+          position: fixed;
+          bottom: 32px;
+          right: 32px;
+          z-index: 1000;
+          background: #25d366;
+          border-radius: 50%;
+          width: 56px;
+          height: 56px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 2px 8px rgba(44, 62, 80, 0.15);
+          text-decoration: none;
+        "
+      >
+        <img
+          src="images/whatsapp-icon.png"
+          alt="WhatsApp Icon"
+          width="32"
+          height="32"
+          id="whatsapp-icon"
+          onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg';"
+        />
+      </a>
+    </section>
+    <footer>
+      <p
+        id="animated-zaya"
+        style="font-weight: bold; font-size: 1.1em; margin-bottom: 8px"
+      ></p>
+      <p
+        id="animated-zaya"
+        style="font-weight: bold; font-size: 1.1em; margin-bottom: 8px"
+      ></p>
+      <img
+        src="images/zayalogo.jpg"
+        alt="Zaya Technologies Logo"
+        style="
+          display: block;
+          margin: 0 auto 12px auto;
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          object-fit: cover;
+          box-shadow: 0 2px 8px rgba(44, 62, 80, 0.15);
+          border: 2px solid #25d366;
+          background: #fff;
+        "
+      />
+      <p>&copy; 2024 Isaiah. All rights reserved.</p>
+    </footer>
+  </body>
+  <script src="index.js"></script>
+</html>
